@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Asghar | Portfolio</title>
+  <meta name="description" content="Professional portfolio showcasing projects and work">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- 3D Environment -->
+  <div class="env-3d" id="env3d" aria-hidden="true">
+    <div class="env-grid"></div>
+    <div class="env-horizon"></div>
+    <div class="env-glow env-glow-1"></div>
+    <div class="env-glow env-glow-2"></div>
+  </div>
+
+  <!-- 3D Floating Scene -->
+  <div class="scene-3d" id="scene3d" aria-hidden="true">
+    <div class="shape shape-1" data-speed="0.03"></div>
+    <div class="shape shape-2" data-speed="0.05"></div>
+    <div class="shape shape-3" data-speed="0.02"></div>
+    <div class="shape shape-4" data-speed="0.04"></div>
+    <div class="shape shape-5" data-speed="0.025"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar glass-nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Portfolio<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content" id="heroContent">
+        <div class="hero-badge">
+          <span id="heroBadge">Available for new projects</span>
+        </div>
+        <h1>Hi, I’m <span class="name" id="heroName">Ali Asghar</span></h1>
+        <p id="heroTagline">Software engineer focused on building reliable, well-designed systems with clear architecture and attention to detail.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Selected Projects</h2>
+        <p>A selection of recent work. Only public projects are shown.</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects injected by JS -->
+      </div>
+      <div class="empty-state" id="projectsEmpty" style="display:none;">
+        <h3>No public projects yet</h3>
+        <p>Check back soon or login as admin to add some.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img id="aboutImage" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Profile">
+        </div>
+        <div class="about-content">
+          <h2>About</h2>
+          <div id="aboutText">
+            <p>I am a software engineer with a focus on building reliable, maintainable systems. My work prioritizes clarity of architecture, careful attention to user experience, and long-term code quality.</p>
+            <p>Outside of project work I contribute to open-source, study systems design, and write about technical subjects that interest me.</p>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <h3 id="statProjects">0</h3>
+              <p>Projects</p>
+            </div>
+            <div class="stat">
+              <h3 id="statYears">3+</h3>
+              <p>Years Exp</p>
+            </div>
+            <div class="stat">
+              <h3 id="statClients">12</h3>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Tools</h2>
+        <p>Technologies used in day-to-day work</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Skills injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Open to discussing new projects and collaborations.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hello@example.com" id="contactEmail">hello@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p id="contactLocation">Remote / Worldwide</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="#" id="contactGithub" target="_blank">github.com/yourusername</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="#" id="contactLinkedin" target="_blank">linkedin.com/in/yourusername</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> <span id="footerName">Ali Asghar</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="js/config.js"></script>
+<script src="js/core.js"></script>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
